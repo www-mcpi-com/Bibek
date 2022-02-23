@@ -1,0 +1,102 @@
+{
+    "version"                   : "1.37.0",
+    "sap.app"                   : {
+        "id"                    : "mcpi.it.finance",
+        "type"                  : "application",
+        "i18n"                  : "i18n/i18n.properties",
+        "applicationVersion"    : "1.0.0",
+        "title"                 : "{{appTitle}}",
+        "description"           : "{{appDescription}}",
+        "dataSources"           : {
+            "mcpiService"       : {
+                "uri"           : "/sap/opu/odata/sap/ZMCPI_BS_ODATA_SRV/",
+                "type"          : "OData",
+                "settings"      : {
+                    "odataVersion" : "2.0"
+                }                  
+            }
+
+        }
+    },
+
+    "sap.ui"                    : {
+        "technology"            : "UI5",
+        "deviceTypes"           : ["desktop", "mobile", "tablet"],
+        "fullWidth"             : true
+
+    },
+
+    "sap.ui5"                   : {
+        "dependencies"          : {
+            "minUI5Version"     : "1.90.0",
+            "libs"              : {
+                "sap.m"         : {},
+                "sap.ui.layout" : {}
+            }
+
+        },
+        "rootView"                  : {
+            "viewName"              : "mcpi.it.finance.view.App",
+            "type"                  : "XML",
+            "id"                    : "idRootApp"
+        },
+        
+        "routing"                   : {
+            "config"                : {
+                "routerClass"       : "sap.m.routing.Router",
+                "viewType"          : "XML",
+                "viewPath"          : "mcpi.it.finance.view",
+                "controlId"         : "idAppCon"
+            },
+            "routes"                : [{
+                "pattern"           : "",
+                "name"              : "home",
+                "target"            : [ "donald" , "modi"]
+            },
+            {
+                "pattern"           : "fruits/{fruitId}",
+                "name"              : "detail",
+                "target"            : [ "donald" , "trumph"]
+            }],
+            "targets"               : {
+                "modi"              : {
+                    "viewId"        : "idEmpty",
+                    "viewName"      : "Empty",
+                    "controlAggregation" : "detailPages"    
+                },
+                "donald"            : {
+                    "viewId"        : "idView1",
+                    "viewName"      : "View1",
+                    "controlAggregation" : "masterPages"       
+                },
+                "trumph"            : {
+                    "viewId"        : "idView2",
+                    "viewName"      : "View2",
+                    "controlAggregation" : "detailPages"       
+                }
+
+            }
+        },     
+        "models"                    : {
+            ""                      : {
+                "type"              : "sap.ui.model.odata.V2.ODataModel",
+                "dataSource"        : "mcpiService"
+            },
+            
+            "local"                      : {
+            "type"                  : "sap.ui.model.json.JSONModel",
+            "uri"                   : "models/mockdata/fruits.json",
+            "settings"              : {
+
+                }    
+            }
+        }
+    },
+    "i18n"                          : {
+       "type"                       : "sap.ui.model.resource.ResourceModel",
+       "uri"                        : "i18n/i18n.properties"
+
+        
+    }      
+
+}

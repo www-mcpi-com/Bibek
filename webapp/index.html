@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script id="sap-ui-bootstrap"
+            type="text/javascript"
+            src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+            data-sap-ui-theme="sap_fiori_3_dark"
+            data-sap-ui-libs="sap.m"    
+            data-sap-ui-bindingSyntax = 'complex'
+            data-sap-ui-resourceroots='{
+                      "mcpi.it.finance" : "./"
+            }' >
+         </script>
+        <script>
+                oCompContainer = new sap.ui.core.ComponentContainer({
+                        name : "mcpi.it.finance"
+                });
+
+                oCompContainer.placeAt("content");
+
+        </script> 
+    
+    </head>
+            <body class ="sapUibody">
+                <div id="content"></div>
+            </body>
+</html>

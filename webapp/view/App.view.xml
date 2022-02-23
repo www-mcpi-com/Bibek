@@ -1,0 +1,4 @@
+<mvc:View xmlns:mvc = "sap.ui.core.mvc" xmlns = "sap.m" controllerName="mcpi.it.finance.controller.App">
+
+    <SplitApp id ="idAppCon"></SplitApp>
+</mvc:View>

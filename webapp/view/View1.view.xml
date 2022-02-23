@@ -1,0 +1,43 @@
+<mvc:View xmlns:mvc = "sap.ui.core.mvc" xmlns = "sap.m" controllerName="mcpi.it.finance.controller.View1">
+    <!-- <Button id="idBtn" text = "Go to Next" press="onNext"> </Button> -->
+<Page title = "View 1">
+    <headerContent>
+        <Button icon="sap-icon://action" tooltip="Go to Next" press="onNext" />
+    </headerContent>
+    <content>
+        <SearchField id = "idSearch" search = "onSearch"></SearchField>
+            <List id = "idList" items ="{ path: '/fruits', sorter: { path : 'name'}}" 
+            mode = "SingleSelectMaster" delete ="onDelete" selectionChange = "onItemSelect">
+                <items>
+                    <ObjectListItem title = "{name}" icon = "{imageURL}" intro = "{type}" number ="{price}" numberUnit = "{currency}" >
+
+                    </ObjectListItem>
+                    <!-- <DisplayListItem label="Apple" value = "Best Antibiotic"></DisplayListItem>
+                    <StandardListItem icon = "https://images.immediate.co.uk/production/volatile/sites/30/2017/01/Bananas-218094b-scaled.jpg" description="Good source of potasiam" title="Banana"></StandardListItem>
+                    <InputListItem>
+                        <HBox>
+                            <Text class = "sapUISmallMarginTop" text = "How much quantity you want"></Text>
+                            <Input width="20%"></Input>
+                        </HBox>    
+                    </InputListItem>
+                    <ObjectListItem title="Pineapple" icon="https://images.ctfassets.net/6jpeaipefazr/bkuuIJdgoxH3SDzknyEaX/b49d0a18a9384dd30bf1c75cc8bf974a/Pineapple.jpg" intro="Good for Glowing skin"
+                            number="200 INR" numberUnit="Pc">
+                    </ObjectListItem>
+                    <CustomListItem>
+                        <content>
+                            <VBox>
+                                <Switch text="Cash on Delivery"></Switch>
+                                <Button text="Fresh Fruits"></Button>
+                            </VBox>
+                        </content>
+                    </CustomListItem>
+                    <FeedListItem sender="Mamta Banerjee" icon="" text="Khela Hobe !!">
+                    </FeedListItem>
+                    <ActionListItem text="Order Now !!!" press="onClick">
+
+                    </ActionListItem> -->
+                </items>
+            </List>
+    </content>
+</Page>
+</mvc:View>
