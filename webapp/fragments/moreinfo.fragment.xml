@@ -2,14 +2,14 @@
 xmlns = "sap.m" xmlns:f = "sap.ui.layout.form">
     <f:SimpleForm>
         <f:content>
-            <Label text = "Name" ></Label>
-            <Text  text = "{name}" ></Text>
-            <Label text = "Color" ></Label>
-            <Text  text = "{color}" ></Text>
-            <Label text = "Health Benefits" ></Label>
-            <Text  text = "{healthBenefit}" ></Text>
+            <Label text = "Product" ></Label>
+            <Text  text = "{NAME}" ></Text>
+            <Label text = "Description" ></Label>
+            <Text  text = "{DESCRIPTION}" ></Text>
+            <Label text = "Supplier" ></Label>
+            <Text  text = "{SUPPLIER_ID}" ></Text>
             <Label text = "Price" ></Label>
-            <Text  text = "{price} {currency}" ></Text>
+            <Text  text = "{PRICE} {CURRENCY_CODE}" ></Text>
         </f:content>
     </f:SimpleForm>
 </core:FragmentDefinition>

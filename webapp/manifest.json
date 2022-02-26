@@ -57,6 +57,12 @@
                 "pattern"           : "fruits/{fruitId}",
                 "name"              : "detail",
                 "target"            : [ "donald" , "trumph"]
+            },
+            {
+                "pattern"           : "addNewProduct",
+                "name"              : "addNew",
+                "target"            : [ "donald" , "putin"]
+
             }],
             "targets"               : {
                 "modi"              : {
@@ -73,13 +79,17 @@
                     "viewId"        : "idView2",
                     "viewName"      : "View2",
                     "controlAggregation" : "detailPages"       
+                },
+                "putin"            : {
+                    "viewId"        : "idAdd",
+                    "viewName"      : "Add",
+                    "controlAggregation" : "detailPages"       
                 }
-
             }
         },     
         "models"                    : {
             ""                      : {
-                "type"              : "sap.ui.model.odata.V2.ODataModel",
+                "type"              : "sap.ui.model.odata.v2.ODataModel",
                 "dataSource"        : "mcpiService"
             },
             

@@ -6,10 +6,10 @@
     </headerContent>
     <content>
         <SearchField id = "idSearch" search = "onSearch"></SearchField>
-            <List id = "idList" items ="{ path: '/fruits', sorter: { path : 'name'}}" 
+            <List id = "idList" growing = "true" growingThreshold = "10" items ="{ path: '/ProductSet'}" 
             mode = "SingleSelectMaster" delete ="onDelete" selectionChange = "onItemSelect">
                 <items>
-                    <ObjectListItem title = "{name}" icon = "{imageURL}" intro = "{type}" number ="{price}" numberUnit = "{currency}" >
+                    <ObjectListItem title = "{PRODUCT_ID} {NAME}" intro = "{CATEGORY}" number ="{PRICE}" numberUnit = "{CURRENCY_CODE}" >
 
                     </ObjectListItem>
                     <!-- <DisplayListItem label="Apple" value = "Best Antibiotic"></DisplayListItem>
@@ -39,5 +39,11 @@
                 </items>
             </List>
     </content>
+    <footer>
+        <Toolbar>
+            <ToolbarSpacer/>
+                <Button icon = "sap-icon://add" press = "onAdd"></Button>
+        </Toolbar>
+    </footer>
 </Page>
 </mvc:View>

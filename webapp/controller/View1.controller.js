@@ -14,6 +14,10 @@ sap.ui.define([
                     fruitId : sIndex
                 });
             },
+            onAdd: function () {
+                this.oRouter.navTo("addNew");
+            },
+
             onDelete: function(oEvent) {
                 var oListItemToBeDelete = oEvent.getParameter("listItem");
                 // var oList = this.getView().byId("idList");

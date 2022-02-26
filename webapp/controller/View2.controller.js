@@ -21,7 +21,7 @@ sap.ui.define([
 
             this.oRouter = this.getOwnerComponent().getRouter();
             this.oRouter.getRoute("detail").attachMatched(this.herculis, this);
-                        
+                     
             },
             
             oSupplierPopup: null,
